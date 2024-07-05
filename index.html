@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segundo Parcial - Marcos Laporte</title>
+    <title>SP Chiarizia</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -21,13 +21,11 @@
                 <thead class="cabeceraTabla">
                     <tr id="fila0">
                         <th class="col_id" id="cab_id">ID</th>
-                        <th class="col_modelo" id="cab_modelo">Modelo</th>
-                        <th class="col_anoFab" id="cab_anoFab">Año Fabricación</th>
-                        <th class="col_velMax" id="cab_velMax">Velocidad Máxima</th>
-                        <th class="col_altMax" id="cab_altMax">Altura Máxima</th>
-                        <th class="col_autonomia" id="cab_autonomia">Autonomia</th>
-                        <th class="col_cantPue" id="cab_cantPue">Cantidad Puertas</th>
-                        <th class="col_cantRue" id="cab_cantRue">Cantidad Ruedas</th>
+                        <th class="col_nombre" id="cab_nombre">Nombre</th>
+                        <th class="col_apellido" id="cab_apellido">Apellido</th>
+                        <th class="col_fechaNacimiento" id="cab_fechaNacimiento">Fecha Nacimiento</th>
+                        <th class="col_dni" id="cab_dni">DNI</th>
+                        <th class="col_paisOrigen" id="cab_paisOrigen">Pais Origen</th>
                         <th class="col_modificar" id="cab_modificar">Modificar</th>
                         <th class="col_eliminar" id="cab_eliminar">Eliminar</th>
                     </tr>
@@ -46,43 +44,35 @@
                             <label>ID:</label>
                             <input type="number" id="inp_id" readonly style="cursor: not-allowed;">
                         </div>
-                        <div id="div_modelo" class="inputABM">
-                            <label>Modelo:</label>
-                            <input type="text" id="inp_modelo">
+                        <div id="div_nombre" class="inputABM">
+                            <label>Nombre:</label>
+                            <input type="text" id="inp_nombre">
                         </div>
-                        <div id="div_anoFab" class="inputABM">
-                            <label>Año Fabricación:</label>
-                            <input type="number" min="1886" max="2022" id="inp_anoFab">
+                        <div id="div_apellido" class="inputABM">
+                            <label>Apellido:</label>
+                            <input type="text"  id="inp_apellido">
                         </div>
-                        <div id="div_velMax" class="inputABM">
-                            <label>Velocidad Máxima:</label>
-                            <input type="number" min="1" id="inp_velMax">
+                        <div id="div_fechaNacimiento" class="inputABM">
+                            <label>Fecha Nacimiento:</label>
+                            <input type="number" id="inp_fechaNacimiento">
                         </div>
                         <div id="div_tipo" class="inputABM">
                             <label for="abmSel_tipo">Tipo:</label>
                             <select id="abmSel_tipo">
-                                <option value='A'>Aéreos</option>
-                                <option value='T'>Terrestres</option>
+                                <option value='C'>Ciudadano</option>
+                                <option value='E'>Extranjero</option>
                             </select>
                         </div>
-                        <div class="inputAereo">
-                            <div id="div_altMax" class="inputABM">
-                                <label>Altura Máxima:</label>
-                                <input type="number" min="1" id="inp_altMax">
-                            </div>
-                            <div id="div_autonomia" class="inputABM">
-                                <label>Autonomía:</label>
-                                <input type="number" min="1" id="inp_autonomia">
+                        <div class="inputCiudadano">
+                            <div id="div_dni" class="inputABM">
+                                <label>DNI:</label>
+                                <input type="number" id="inp_dni">
                             </div>
                         </div>
-                        <div class="inputTerrestre">
-                            <div id="div_cantPue" class="inputABM">
-                                <label>Cantidad Puertas:</label>
-                                <input type="number" min="1" id="inp_cantPue">
-                            </div>
-                            <div id="div_cantRue" class="inputABM">
-                                <label>Cantidad Ruedas:</label>
-                                <input type="number" min="1" id="inp_cantRue">
+                        <div class="inputExtranjero">
+                            <div id="div_paisOrigen" class="inputABM">
+                                <label>Pais Origen:</label>
+                                <input type="text" id="inp_paisOrigen">
                             </div>
                         </div>
                     </div>
@@ -96,7 +86,7 @@
         </section>
     </div>
 
-    <script type="text/javascript" src="vehiculo.js"></script>
+    <script type="text/javascript" src="persona.js"></script>
     <script type="text/javascript" src="funciones.js"></script>
 </body>
 
