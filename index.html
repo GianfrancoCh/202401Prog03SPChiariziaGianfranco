@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Parcial - Marcos Laporte</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="spinner_container">
+            <img src="loading.gif" id="spinner">
+        </div>
+        <section id="formPpal" class="forms">
+            <h1 style="text-align:center;">Formulario Lista</h1>
+
+            <table id="tabla">
+                <thead class="cabeceraTabla">
+                    <tr id="fila0">
+                        <th class="col_id" id="cab_id">ID</th>
+                        <th class="col_modelo" id="cab_modelo">Modelo</th>
+                        <th class="col_anoFab" id="cab_anoFab">Año Fabricación</th>
+                        <th class="col_velMax" id="cab_velMax">Velocidad Máxima</th>
+                        <th class="col_altMax" id="cab_altMax">Altura Máxima</th>
+                        <th class="col_autonomia" id="cab_autonomia">Autonomia</th>
+                        <th class="col_cantPue" id="cab_cantPue">Cantidad Puertas</th>
+                        <th class="col_cantRue" id="cab_cantRue">Cantidad Ruedas</th>
+                        <th class="col_modificar" id="cab_modificar">Modificar</th>
+                        <th class="col_eliminar" id="cab_eliminar">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpoTabla" id="fuenteCuerpo"></tbody>
+            </table>
+            <button type="button" class="botones" id="agregar">Agregar elemento</button>
+        </section>
+
+        <section id="formABM" class="forms">
+            <div class="containerABM">
+                <h3 id="formTitulo">Formulario ABM</h3>
+                <form>
+                    <div class="formInputs">
+                        <div id="div_id" class="inputABM">
+                            <label>ID:</label>
+                            <input type="number" id="inp_id" readonly style="cursor: not-allowed;">
+                        </div>
+                        <div id="div_modelo" class="inputABM">
+                            <label>Modelo:</label>
+                            <input type="text" id="inp_modelo">
+                        </div>
+                        <div id="div_anoFab" class="inputABM">
+                            <label>Año Fabricación:</label>
+                            <input type="number" min="1886" max="2022" id="inp_anoFab">
+                        </div>
+                        <div id="div_velMax" class="inputABM">
+                            <label>Velocidad Máxima:</label>
+                            <input type="number" min="1" id="inp_velMax">
+                        </div>
+                        <div id="div_tipo" class="inputABM">
+                            <label for="abmSel_tipo">Tipo:</label>
+                            <select id="abmSel_tipo">
+                                <option value='A'>Aéreos</option>
+                                <option value='T'>Terrestres</option>
+                            </select>
+                        </div>
+                        <div class="inputAereo">
+                            <div id="div_altMax" class="inputABM">
+                                <label>Altura Máxima:</label>
+                                <input type="number" min="1" id="inp_altMax">
+                            </div>
+                            <div id="div_autonomia" class="inputABM">
+                                <label>Autonomía:</label>
+                                <input type="number" min="1" id="inp_autonomia">
+                            </div>
+                        </div>
+                        <div class="inputTerrestre">
+                            <div id="div_cantPue" class="inputABM">
+                                <label>Cantidad Puertas:</label>
+                                <input type="number" min="1" id="inp_cantPue">
+                            </div>
+                            <div id="div_cantRue" class="inputABM">
+                                <label>Cantidad Ruedas:</label>
+                                <input type="number" min="1" id="inp_cantRue">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="abmBotones">
+                    <button type="submit" class="botones" id="aceptar">Ok</button>
+                    <button type="button" class="botones" id="cancelar">Cancelar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="vehiculo.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
+</body>
+
+</html>
