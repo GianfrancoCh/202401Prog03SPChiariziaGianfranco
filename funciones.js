@@ -117,7 +117,6 @@ async function AgregarPersona(persona) {
 	}
 }
 
-
 async function ModificarPersona(persona) {
 	let consulta = null;
 	let ciudadano = persona instanceof Ciudadano && InputsValidosCiudadano();
@@ -160,6 +159,7 @@ async function ModificarPersona(persona) {
 		alert("Revise los campos!");
 	}
 }
+
 
 async function EliminarPersona(persona) {
 	let consulta = null;
